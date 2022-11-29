@@ -159,7 +159,7 @@ const Post = ({ id, username, userImg, img, caption }) => {
             value={comment}
             onChange={(e) => setComment(e.target.value)}
             className='flex-1 border-none focus:ring-0 outline-none'
-            placeholder='Write your post here'
+            placeholder='Write your comment here'
             type='text'
           />
           <button

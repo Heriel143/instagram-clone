@@ -46,9 +46,9 @@ const Header = () => {
             src='https://links.papareact.com/jjm'
             // layout='fill'
             // objectFit='contain'
-            width={40}
-            height={40}
-            className=' object-contain w-4 h-4'
+            width={100}
+            height={100}
+            className=' object-contain w-10 h-10 mt-4'
           />
         </div>
         {/** Middle: input field */}
@@ -65,7 +65,14 @@ const Header = () => {
         {/** Right */}
         <div className='flex items-center justify-end space-x-4'>
           <HomeIcon onClick={() => router.push("/")} className='navBtn' />
-          <Bars3Icon className='h-6 md:hidden cursor-pointer' />
+          {!session ? (
+            <Bars3Icon className='h-10 w-10 md:hidden cursor-pointer' />
+          ) : (
+            <PlusCircleIcon
+              onClick={() => setOpen(true)}
+              className='h-16 w-16 md:hidden cursor-pointer'
+            />
+          )}
 
           {session ? (
             <>
