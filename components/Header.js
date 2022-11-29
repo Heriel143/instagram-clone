@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import React from "react";
 import {
   MagnifyingGlassIcon,
@@ -31,8 +31,11 @@ const Header = () => {
         >
           <Image
             src='https://links.papareact.com/ocw'
-            layout='fill'
-            objectFit='contain'
+            // layout='fill'
+            // objectFit='contain'
+            width={100}
+            height={100}
+            className=' object-contain'
           />
         </div>
         <div
@@ -41,8 +44,11 @@ const Header = () => {
         >
           <Image
             src='https://links.papareact.com/jjm'
-            layout='fill'
-            objectFit='contain'
+            // layout='fill'
+            // objectFit='contain'
+            width={40}
+            height={40}
+            className=' object-contain w-4 h-4'
           />
         </div>
         {/** Middle: input field */}
